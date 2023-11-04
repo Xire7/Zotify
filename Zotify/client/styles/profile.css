@@ -1,0 +1,37 @@
+html {
+    margin: 0;
+}
+
+nav {
+    height: 40px;
+    background-color: rgb(10, 56, 99);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+  .title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 40px;
+    font-weight: bold;
+    text-align:center;
+    margin: auto;
+    
+}
+  
+  .profilebutton {
+    line-height: 40px;
+    margin-right: 50px;
+    text-decoration: none;
+    margin-left: auto;
+    color: white;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
