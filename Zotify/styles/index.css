@@ -1,39 +1,29 @@
 :root {
-    --card_width: 250px;
+    --card_width: 300px;
     --row_increment: 10px;
     --card_border_radius: 16px;
-    --card_small: 26;
-    --card_med: 33;
-    --card_large: 45;
+    --card_small: 30;
+    --card_medium: 35;
+    --card_large: 40;
 }
-
-h1 {
-    text-align: center;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: auto;
-    background-color: black;
-    padding: 10px;
-    width: 70%;
-    
-}
-
-
 
 html {
-    background-color: rgb(44, 205, 111);
+    background-color: white;
 }
 
 body {
     margin: 0;
-    border: 2px;
 }
 
+nav {
+    height: 60px;
+    background-color: aquamarine;
+}
 
   .pin_container {
     margin: 0;
     padding: 0;
-    width: 80vw;
+    width: 100vw;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -47,8 +37,31 @@ body {
     padding: 0px;
     margin: 15px 10px;
     border-radius: var(--card_border_radius);
-    background-color: white;
+    background-color: rgb(132, 194, 249);
+    position: relative;
 }
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+
+.card_header {
+    width: 100%;
+}
+
+.card_img_box {
+    margin: 1em;
+    width: 3em;
+    height: 3em;
+}
+
+.card_img_box > img {
+    width: 100%;
+    border-radius: 50%;
+}
+
 
 .card_small > img {
     width: 50%;
