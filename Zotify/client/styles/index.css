@@ -8,50 +8,82 @@
 }
 
 html {
-  background-color: white;
+  background-color: rgb(44, 44, 44);
   font-family: "Inter", sans-serif;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+.logo-anchor {
+  width: 4em;
+  height: 4em;
+  text-align: center;
+  line-height: 2em;
+}
+
+.title-anchor {
+  width: 4em;
+  height: 4em;
+}
+
+.logo-anchor > img {
+  width: 4em;
+  height: 4em;
+  margin-left: 10px;
+}
+
+.logo-anchor > img:hover {
+  transform: scale(1.05);
 }
 
 nav {
-    height: 40px;
-    background-color: rgb(10, 56, 99);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
+  padding: 12px;
+  background-color: rgb(52, 52, 52);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-  .title {
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    line-height: 40px;
-    font-weight: bold;
-    text-align:center;
-    margin: auto;
-    
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+  width: 200px;
+  height: auto;
 }
   
-  .profilebutton {
-    line-height: 40px;
-    margin-right: 5vw;
-    text-decoration: none;
-    margin-left: auto;
-    color: white;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+.profilebutton {
+  margin-right: 70px;
+  text-decoration: none;
+  margin-left: auto;
+  color: white;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.profilebutton > img {
+  width: 7em;
+}
 
 .pin_container {
-  margin-top: 30px;
+  margin-top: 90px;
   padding: 0;
   width: 100vw;
   position: absolute;
@@ -69,22 +101,27 @@ nav {
     margin: 15px 10px;
     
     border-radius: var(--card_border_radius);
-    border: 0.1em solid rgb(60, 60, 60);
+    border: 0.1em solid rgb(53, 53, 53);
     background-color: rgb(132, 194, 249);
     position: relative;
     overflow: hidden;
-    box-shadow:7px 7px 7px rgba(0, 0, 0, 0.319);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.352);
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     font-family: Arial, Helvetica, sans-serif;
+
+    transition: transform 0.3s;
     
 }
 
+.card:hover {
+  transform: scale(1.05);
+}
+
 .card > img {
-  margin-top: -2%; /*TODO: change the margin top to not be hard coded */
   position: absolute;
   z-index: 0;
   height: 100%;
@@ -95,7 +132,7 @@ nav {
 }
 
 .card_header {
-  height: 60px;
+  height: 70px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -107,7 +144,8 @@ nav {
 }
 
 .song_title {
-  height: 120px;
+  margin-bottom:-10%;
+  height: 150px;
   position: relative; 
   text-align: center;
   background: linear-gradient(0deg, rgb(99, 99, 99, 20) 0%, rgba(0, 0, 0, 0) 100%);
@@ -116,34 +154,27 @@ nav {
   display: flex;
   justify-content: flex-start;
   align-items:flex-end;
-  padding-left: 10px;
-}
-
-
-.card_header > p {
-  padding-right: 1em;
+  padding-left: 15px;
+  padding-bottom: 25px;
 }
 
 .card_img_box {
   margin: 1em;
   width: 3em;
   height: 3em;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .card_img_box > img { /*profile picture*/
-  width: 100%;
-  border-radius: 50%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card_header > * {
   z-index: 2;
 }
 
-/* .card_small > img {
-    width: 50%;
-    justify-content: center;
-    align-content: center;
-} */
 .card_large > img {
   width: 100%;
   justify-content: center;

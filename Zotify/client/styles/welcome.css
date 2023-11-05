@@ -7,6 +7,8 @@ body {
 	background-size: 400% 400%;
 	animation: gradient 12s ease infinite;
 	height: 100vh;
+    margin: 0;
+    overflow: hidden;
 }
 
 @keyframes gradient {
@@ -22,31 +24,55 @@ body {
 }
 
 .login-button {
-    border: none;
+    border: solid rgb(240, 238, 87);
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 10px 30px;
     font: inherit;
-    background-color: rgb(247, 246, 197);
-
+    font-size: 24px;
+    background-color: rgb(240, 238, 87);
+    transition: 0.15s;
 }
 
 .login-button:active {
-    /* background-color: rgb(214, 214, 179); */
-    animation: myfirst 400ms;
+    background: rgb(192, 191, 160);
 }
 
-@keyframes myfirst {
+.login-button:hover {
+    border-color: #5A88FF;
+    animation: login-hover 0.15s forwards; 
+}
+
+@keyframes login-hover {
     0% {background: rgb(247, 246, 197);}
-  100% {background: rgb(247, 246, 197);}
+    100% {background: rgb(134, 212, 167);}
 }
 
-.login-button:after {
-    animation: last 400ms;
+.login-button:focus {
+    outline:0;
 }
 
-@keyframes last {
-    0% {background: rgb(200, 199, 159);}
-    100% {background: rgb(247, 246, 197);}
+.reauth-button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    font: inherit;
+    font-size: 24px;
+    background-color: rgb(245, 245, 253);
+    transition: 0.15s;
+}
+
+.reauth-button:active {
+    background: none;
+}
+
+.reauth-button:hover {
+    border-color: rgb(245, 245, 253);
+    animation: login-hover 0.15s forwards; 
+}
+
+@keyframes reauth-hover {
+    0% {background: none;}
+    100% {background: rgb(238, 238, 231);}
 }
 
 header {
@@ -61,10 +87,47 @@ header {
     justify-content: center;
     column-gap: 8em;
     font-family: 'Inter';
-    height: 100vh;
+    height: 35vh;
     width: 100vw;
+}
+
+.hero-text {
+    max-width: 50%;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: rgb(245, 245, 253);
+}
+
+.hero-text > * {
+    margin: 0;
+    height: 10
+}
+
+.heading {
+    padding: 0;
+    font-weight: 700;
+    font-size: 55px;
+}
+
+.subheading {
+    padding: 0;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    margin-top: -18%;
 }
 
 .hero-image > img {
     height: 70vh;
+    border-radius: 20px;
+    margin-top: 10px;
 }
+
+.mascot-image > img {
+    height: 50vh;
+    margin-left: 130px;
+}
+

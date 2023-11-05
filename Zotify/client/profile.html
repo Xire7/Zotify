@@ -4,18 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
+    <title>My Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@600&family=Inter:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/profile.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
   </head>
-  <body>
+  <body> 
     <main>
         <!-- Nav bar -->
-        <nav> 
-          <h1 class="title">ZOTIFY</h1>
-          <a class="profilebutton" href="profile.html">My Account</a>
+        <nav>
+          <a class="logo-anchor" href="./welcome.html"><img src="./images/zotify.png" alt="zotify logo"/></a> <!-- will change this back later-->
+          <a class="title-anchor" href="./index.html"><img class="title" src="./images/zotify_text.png" alt="zotify text"/></a>
+          <a class="profilebutton" href="./profile.html"><img class="myaccount_img" src="./images/myaccount.png" alt="my account button"/></a>
         </nav>
-    </main>
-	<script src="index.js"></script>
+
+
+        <div class="namebox">
+          
+          <img class="profile-picture" src="./images/zotmascotwb.png" alt="pfp">
+
+      
+          
+          <div class="info-box">
+            <p class="username">Peter</p>
+
+            <!-- stats box for number of followers and number the user is following -->
+            <div class="stats-box">
+              <p class="follower-info">10k followers <br> 5 following</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Select Time</button>
+          <div class="dropdown-content">
+            <a href="#" class="updateTime">One Month</a>
+            <a href="#" class="updateTime">Six Months</a>
+            <a href="#" class="updateTime">All Time</a>
+          </div>
+        </div>
+
+        <div class="pin_container">
+          <div class="card card_medium short" onclick="window.location.href = '//open.spotify.com/track/3xKsf9qdS1CyvXSMEid6g8?si=01ba06004a38416a';" >
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a0/Blonde_-_Frank_Ocean.jpeg" alt="album"/>
+            <div class="song_title">
+              <p>Pink + White</p>
+            </div>
+          </div>
+
+          <div class="card card_medium short" onclick="window.location.href = '//open.spotify.com/track/0ZAiqymvbQUZAh9y6ZT3Rm?si=c5499ac7e5b4445f';" >
+            <img src="https://i.scdn.co/image/ab67616d0000b273c61b46cf682d7f0183fcb87c" alt="album"/>
+            <div class="song_title">
+              <p>XO</p>
+            </div>
+          </div>
+
+          <div class="card card_medium medium" onclick="window.location.href = '//open.spotify.com/track/3xKsf9qdS1CyvXSMEid6g8?si=e42d7804a6974fe5';" >
+            <img src="https://open.spotify.com/track/43bYs8QkPdCdy5esfnmU1T?si=16da992d30f54c78" alt="album"/>
+            <div class="song_title">
+              <p>Comme des Garçons</p>
+            </div>
+          </div>
+          
+          
+          
+          <div class="card card_medium medium" onclick="window.location.href = '//open.spotify.com/track/1nYeVF5vIBxMxfPoL0SIWg?si=0a27ef6f12b64eb6';" >
+            <img src="https://voluptuousvinyl.com/cdn/shop/products/dua_lipa_future_nostalgia_vinyl_front_cover.jpg?v=1650321702" alt="album"/>
+            <div class="song_title">
+              <p>Hallucinate</p>
+            </div>
+          </div>
+          
+          <div class="card card_medium long" onclick="window.location.href = '//open.spotify.com/track/3B54sVLJ402zGa6Xm4YGNe?si=c75c208afbc64836';" >
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Jungle_Rules_by_French_Montana.jpg" alt="album"/>
+            <div class="song_title">
+              <p>Unforgettable</p>
+            </div>
+          </div>
+          
+          <div class="card card_medium long" onclick="window.location.href = '//open.spotify.com/track/6qAcApH8obo8eqatCKUHd9?si=6df38bea2e71481d';">
+            <img src="https://i.redd.it/my-take-on-1989-taylors-version-album-cover-v0-e0zjggwxm9pb1.png?width=3464&format=png&auto=webp&s=a28326ae9a211eecfdc8ef8c2d6e9f5c0146c69e" alt="album"/>
+            <div class="song_title">
+              <p>Bad Blood</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card card_medium long" onclick="window.location.href = '';" >
+          <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Jungle_Rules_by_French_Montana.jpg" alt="album"/>
+          <div class="song_title">
+            <p>Unforgettable</p>
+          </div>
+        </div>
+
+        <div class="card card_medium long" onclick="window.location.href = '';" >
+          <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Jungle_Rules_by_French_Montana.jpg" alt="album"/>
+          <div class="song_title">
+            <p>Unforgettable</p>
+          </div>
+        </div>
+        
+
+        
+      </main>
+	<script src="./scripts/displayProfileCards.js"></script>
   </body>
 </html>
